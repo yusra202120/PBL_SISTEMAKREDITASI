@@ -24,4 +24,7 @@ Route::get('/beranda', [BerandaController::class, 'index'])->name('beranda');
 
 Route::get('/kriteria', [KriteriaController::class, 'index'])->name('kriteria.detail');
 
+use App\Http\Controllers\SubkriteriaController;
 
+// routes/web.php
+Route::get('/subkriteria/{id}', [SubkriteriaController::class, 'index'])->name('subkriteria.index');
