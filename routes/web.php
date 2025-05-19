@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+use App\Http\Controllers\BerandaController;
+use App\Http\Controllers\KriteriaController;
+
+Route::get('/beranda', [BerandaController::class, 'index'])->name('beranda');
+
+Route::get('/kriteria', [KriteriaController::class, 'index'])->name('kriteria.detail');
+
+
